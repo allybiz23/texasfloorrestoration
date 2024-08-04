@@ -9,6 +9,7 @@ const EstimateForm: React.FC = () => {
     address: "",
     email: "",
     stoneType: "",
+    additionalNotes: "",
     appointmentDate: "",
     appointmentTime: "",
   });
@@ -47,6 +48,7 @@ const EstimateForm: React.FC = () => {
         address: "",
         email: "",
         stoneType: "",
+        additionalNotes: "",
         appointmentDate: "",
         appointmentTime: "",
       });
@@ -123,6 +125,20 @@ const EstimateForm: React.FC = () => {
             <option value="concrete">Concrete</option>
             <option value="other">Other</option>
           </select>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="additionalNotes" className="form-label">
+            Additional Notes
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="additionaNotes"
+            name="additionalNotes"
+            value={formData.additionalNotes}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="mb-3">
           <label htmlFor="appointmentDate" className="form-label">

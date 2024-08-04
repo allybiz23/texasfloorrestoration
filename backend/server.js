@@ -24,6 +24,7 @@ const estimateSchema = new mongoose.Schema({
   address: String,
   email: String,
   stoneType: String,
+  additionalNotes: String,
   appointmentDate: String,
   appointmentTime: String,
 });
