@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InfoForm: React.FC = () => {
+const EstimateForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -42,7 +42,7 @@ const InfoForm: React.FC = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mw-33">
       <h1>Schedule an Estimate</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -145,4 +145,4 @@ const InfoForm: React.FC = () => {
   );
 };
 
-export default InfoForm;
+export default EstimateForm;
