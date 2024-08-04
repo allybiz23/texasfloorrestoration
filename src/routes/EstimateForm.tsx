@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import classes from "./Estimate.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
 const EstimateForm: React.FC = () => {
@@ -56,7 +57,7 @@ const EstimateForm: React.FC = () => {
   };
 
   return (
-    <div className="container mt-5 mw-33">
+    <div className={`${classes.formContainer} container mt-5 mw-33`}>
       <h1>Schedule an Estimate</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -151,7 +152,7 @@ const EstimateForm: React.FC = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mb-5">
           Submit
         </button>
       </form>
