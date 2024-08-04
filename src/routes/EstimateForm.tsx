@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const EstimateForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,9 +21,6 @@ const EstimateForm: React.FC = () => {
     });
   };
 
-  // TODO: show message after submission
-  // TODO: show error message after submission fails
-  // TODO: clear formafter success
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -39,8 +38,20 @@ const EstimateForm: React.FC = () => {
 
       const result = await response.json();
       console.log(result);
+      toast.success("Form submitted successfully!");
+
+      // Clear form after success
+      setFormData({
+        name: "",
+        address: "",
+        email: "",
+        stoneType: "",
+        appointmentDate: "",
+        appointmentTime: "",
+      });
     } catch (error) {
       console.error("Error:", error);
+      toast.error("Error submitting form. Please try again.");
     }
   };
 
@@ -144,6 +155,7 @@ const EstimateForm: React.FC = () => {
           Submit
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

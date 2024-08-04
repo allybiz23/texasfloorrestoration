@@ -1,0 +1,24 @@
+.about-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+    width: 300px;  /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px;  /* Optional: Rounds corners */
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #333;  /* Dark grey for readability */
+    line-height: 1.6;  /* Increases line height for better readability */
+  }

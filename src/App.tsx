@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
+import Home from "./routes/HomePage";
 import About from "./routes/About";
 import EstimateForm from "./routes/EstimateForm";
-import Navigation from "./componants/Navigation";
+import Navigation from "./routes/Navigation";
 
 const App: React.FC = () => (
   <BrowserRouter>

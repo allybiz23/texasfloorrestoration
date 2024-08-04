@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./Navigation.css";
 const Navigation: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
